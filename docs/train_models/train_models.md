@@ -8,8 +8,8 @@ To train GeneFace, please first follow the docs in `docs/prepare_env` and `docs/
 
 We also provide pre-trained models at [this link](https://github.com/yerfor/GeneFace/releases/tag/v1.1.0), in which:
 
-* `lrs3.zip` includes the models trained on LRS3-ted dataset (a `lm3d_vae_sync` to perform the audio2motion transform and a `syncnet` for measuring the lip-sync), which are generic for all possible target person videos.
-* `May.zip` includes the models trained on the `May.mp4` target person video (a `postnet` for refining the predicted 3d landmark, a `lm3d_radnerf` for rendering the head image, and a `lm3d_radnerf_torso` for rendering the torso part). For each target person video, you need to train these three models.
+- `lrs3.zip` includes the models trained on LRS3-ted dataset (a `lm3d_vae_sync` to perform the audio2motion transform and a `syncnet` for measuring the lip-sync), which are generic for all possible target person videos.
+- `May.zip` includes the models trained on the `May.mp4` target person video (a `postnet` for refining the predicted 3d landmark, a `lm3d_radnerf` for rendering the head image, and a `lm3d_radnerf_torso` for rendering the torso part). For each target person video, you need to train these three models.
 
 ## Step1. Train the SyncNet Model
 
