@@ -21,7 +21,7 @@ class Face3DHelper:
 
         self.point_buf = torch.from_numpy(model['point_buf']).float().to(self.device) # triangle indices for each vertex that lies in. starts from 1. [N,8] (1-F)
         self.face_buf = torch.from_numpy(model['tri']).float().to(self.device) # vertex indices in each triangle. starts from 1. [F,3] (1-N)
-        self.key_points = torch.from_numpy(model['keypoints'].squeeze().astype(np.long)).long().to(self.device) # vertex indices of 68 facial landmarks. starts from 1. [68,1]
+        self.key_points = torch.from_numpy(model['keypoints'].squeeze().astype(np.longlong)).long().to(self.device) # vertex indices of 68 facial landmarks. starts from 1. [68,1]
 
         self.key_mean_shape = self.mean_shape.reshape([-1,3])[self.key_points,:].to(self.device)
         self.key_id_base = self.id_base.reshape([-1,3,80])[self.key_points, :, :].reshape([-1,80]).to(self.device)
